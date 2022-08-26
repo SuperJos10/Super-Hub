@@ -8,6 +8,14 @@ local Window = Library.CreateLib("Super Hub", "Ocean")
     local MainSection = Main:NewSection("Main")
 
 
-    MainSection:NewSlider("Walkspeed", "SPEED!!", 500, 16, function(s)
+    MainSection:NewSlider("Walkspeed", "Customise Your Characters Walking Speed", 500, 16, function(s)
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+
+    MainSection:NewToggle("Infinite Health", "Self Explanitory", function(state)
+        if state then
+            game.Workspace.LocalPlayer.Humanoid.MaxHealth= math.Huge
+        else
+            game.Workspace.LocalPlayer.Humanoid.MaxHealth= 100
+        end
     end)
