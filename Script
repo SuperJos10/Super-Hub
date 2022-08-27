@@ -20,6 +20,16 @@ local Window = Library.CreateLib("Super Hub", "Ocean")
         end
     end)
 
+--OTHER
+local Other = Window:NewTab("Other")
+local OtherSection = Other:NewSection("Seperate Hubs")
+OtherSection:NewButton("Dark Hub", "Arsenal Hub", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RandomAdamYT/DarkHub/master/Init", true))()
+end)
+
+OtherSection:NewButton("Midi Player", "Rblx Got Talent", function()
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/MidiPlayer/main/package.lua"))()
+end)
 
 --CREDITS
 local Credits = Window:NewTab("Credits")
