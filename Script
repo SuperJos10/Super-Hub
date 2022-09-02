@@ -1,8 +1,8 @@
--- Super Hub
+-- Super Hub-v1.2 ALPHA
 -- By SuperJos10
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Super Hub", "Ocean")
+local Window = Library.CreateLib("Super Hub", "Synapse")
     -- MAIN
     local Main = Window:NewTab("Main")
     local MainSection = Main:NewSection("Main")
@@ -18,6 +18,10 @@ local Window = Library.CreateLib("Super Hub", "Ocean")
         else
             game.Workspace.LocalPlayer.Humanoid.MaxHealth= 100
         end
+    end)
+
+    MainSection:NewButton("Kill Anyone FE", "Kill Anyone Tool", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/PhoenixAceVFX/Roblox-Scripts/master/FE%20KILL%20ANYONE%20ON%20ANY%20GAME%20BYPASS.lua", true))()
     end)
 
     --OTHER
