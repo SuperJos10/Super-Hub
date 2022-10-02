@@ -14,9 +14,11 @@ local Window = Library.CreateLib("Super Hub", "Synapse")
 
     MainSection:NewToggle("Infinite Health", "Self Explanitory", function(state)
         if state then
-            game.Workspace.LocalPlayer.Humanoid.Health= 1000000000
+            game.Workspace.LocalPlayer.Humanoid.MaxHealth= math.Huge
+            game.Workspace.LocalPlayer.Humanoid.Health= math.Huge
         else
-            game.Workspace.LocalPlayer.Humanoid.MaxHealth= 1000000000
+            game.Workspace.LocalPlayer.Humanoid.MaxHealth= 100
+            game.Workspace.LocalPlayer.Humanoid.Health= 100
         end
     end)
 
