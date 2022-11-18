@@ -1,11 +1,13 @@
--- Super Hub-v3.0 ALPHA
+-- Super Hub-v3.1 ALPHA
 -- By SuperJos10
 
 -- If you are reading this hi :)
 -- I put alot of work trial and error into this script so please be thankful!
+-- The credits are at the bottom and also in the actual script itself
+-- If you have any information about it please message me on discord at PierDan#7707
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Super Hub", "Synapse")
+local Window = Library.CreateLib("Super Hub (3.1)", "Synapse")
     -- MAIN
     local Main = Window:NewTab("Main")
     local MainSection = Main:NewSection("Main")
@@ -471,11 +473,28 @@ end
 -- Run the created entity
 Creator.runEntity(entity)
     end)
-
-
-
+    
+    
     --CREDITS
     local Credits = Window:NewTab("Credits")
     local CreditsSection = Credits:NewSection("UI by SuperJos10")
     local CreditsSection = Credits:NewSection("Scripts selected by SuperJos10")
     local CreditsSection = Credits:NewSection("Script by xHeptc and SuperJos10")
+
+    --INFO
+    local Info = Window:NewTab("Other Information")
+    local InfoSection = Info:NewSection("Contact me on discord at PierDan#7707")
+    local InfoSection = Info:NewSection("This is a solo project but you can ask to help (discord)")
+    local InfoSection = Info:NewSection("Update logs and information on github (in 3.2 or 4.0)")
+    local InfoSection = Info:NewSection("Read about the discord update on github")
+    local InfoSection = Info:NewSection("DM me suggestions to add if people care")
+    local InfoSection = Info:NewSection("I am not trying to compete with other major scripts")
+    local InfoSection = Info:NewSection("This part will probably stay similar throughout updates")
+    
+    
+    
+    
+    
+    
+    
+    -- 500 lines of code 0_0
