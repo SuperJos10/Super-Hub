@@ -54,6 +54,10 @@ local Window = Library.CreateLib("Super Hub (3.1)", "Synapse")
         loadstring(game:HttpGet("https://raw.githubusercontent.com/boomcacas/androminome/main/hub"))()
     end)
 
+    OtherSection:NewButton("RogueHub", "Slap Battles and more", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Kitzoon/Rogue-Hub/main/Main.lua", true))()
+    end)
+
     --EXTRA
     local Extra = Window:NewTab("Extra")
     local ExtraSection = Extra:NewSection("Press to toggle UI")
@@ -490,10 +494,6 @@ Creator.runEntity(entity)
     local InfoSection = Info:NewSection("DM me suggestions to add if people care")
     local InfoSection = Info:NewSection("I am not trying to compete with other major scripts")
     local InfoSection = Info:NewSection("This part will probably stay similar throughout updates")
-    
-    
-    
-    
     
     
     
