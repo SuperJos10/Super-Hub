@@ -1,4 +1,4 @@
--- Super Hub-v3.1 ALPHA
+-- Super Hub-v3.2 ALPHA
 -- By SuperJos10
 
 -- If you are reading this hi :)
@@ -63,6 +63,10 @@ local Window = Library.CreateLib("Super Hub (3.1)", "Synapse")
     local ExtraSection = Extra:NewSection("Press to toggle UI")
     ExtraSection:NewKeybind("J", "Press J to toggle UI", Enum.KeyCode.J, function()
         Library:ToggleUI()
+    end)
+
+    ExtraSection:NewButton("Get HWID (Hardware ID)", "Pastes HWID in console", function()
+        print(game:GetService("RbxAnalyticsService"):GetClientId())
     end)
 
 
@@ -482,8 +486,8 @@ Creator.runEntity(entity)
     --CREDITS
     local Credits = Window:NewTab("Credits")
     local CreditsSection = Credits:NewSection("UI by SuperJos10")
-    local CreditsSection = Credits:NewSection("Scripts selected by SuperJos10")
-    local CreditsSection = Credits:NewSection("Script by xHeptc and SuperJos10")
+    local CreditsSection = Credits:NewSection("Script library by xHeptc")
+    local CreditsSection = Credits:NewSection("Script by SuperJos10")
 
     --INFO
     local Info = Window:NewTab("Other Information")
@@ -493,8 +497,4 @@ Creator.runEntity(entity)
     local InfoSection = Info:NewSection("Read about the discord update on github")
     local InfoSection = Info:NewSection("DM me suggestions to add if people care")
     local InfoSection = Info:NewSection("I am not trying to compete with other major scripts")
-    local InfoSection = Info:NewSection("This part will probably stay similar throughout updates")
-    
-    
-    
-    -- 500 lines of code 0_0
+    local InfoSection = Info:NewSection("This part will probably stay similar throughout updates")      -- 500 lines finally without cheating
