@@ -1,5 +1,7 @@
--- Super Hub-v3.2 ALPHA
+-- Super Hub-v3.3 ALPHA
 -- By SuperJos10
+
+-- loadstring(game:HttpGet("https://gist.githubusercontent.com/DeveloperMikey/e38e678bc4c1a1ee92ff27db7cdd4c3f/raw/wordbomb.lua", true))()
 
 -- If you are reading this hi :)
 -- I put alot of work trial and error into this script so please be thankful!
@@ -7,14 +9,18 @@
 -- If you have any information about it please message me on discord at PierDan#7707
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Super Hub (3.1)", "Synapse")
+local Window = Library.CreateLib("Super Hub (3.3)", "Synapse")
     -- MAIN
     local Main = Window:NewTab("Main")
     local MainSection = Main:NewSection("Main")
 
 
-    MainSection:NewSlider("Walkspeed", "Customise Your Characters Walking Speed", 500, 16, function(s)
+    MainSection:NewSlider("Walkspeed", "Customise Your Characters Walking Speed!", 500, 16, function(s)
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+
+    MainSection:NewSlider("JumpPower", "Customise Your Characters Jumping Power!", 10000, 16, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
     end)
 
     MainSection:NewToggle("Infinite Health", "Self Explanitory (IDK if it still works)", function(state)
@@ -56,6 +62,18 @@ local Window = Library.CreateLib("Super Hub (3.1)", "Synapse")
 
     OtherSection:NewButton("RogueHub", "Slap Battles and more", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Kitzoon/Rogue-Hub/main/Main.lua", true))()
+    end)
+
+    OtherSection:NewButton("Strongman Sim", "Good for autofarm", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Fluxxx222/Strongman-Simulator/main/Strongman%20gui"))()
+    end)
+
+    --MYSCRIPTS
+    local My = Window:NewTab("My Scripts")
+    local MySection = My:NewSection("Alternate Loader")
+    
+    MySection:NewButton("Separate Loader", "My Scripts are in this loader!", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SuperJos10/Super-Hub/main/Separate/SuperHub%20Seperate%20Loader.lua"))()
     end)
 
     --EXTRA
@@ -458,23 +476,23 @@ local entity = Creator.createEntity({
 
 -----[[ Advanced ]]-----
 entity.Debug.OnEntitySpawned = function(entityModel)
-    print("Entity has spawned:", entityModel)
+    print("Entity has spawned:", entityModel) -- This pastes in the console
 end
 
 entity.Debug.OnEntityDespawned = function(entityModel)
-    print("Entity has despawned:", entityModel)
+    print("Entity has despawned:", entityModel) -- This pastes in the console
 end
 
 entity.Debug.OnEntityStartMoving = function(entityModel)
-    print("Entity has started moving:", entityModel)
+    print("Entity has started moving:", entityModel) -- I think this pastes in the console
 end
 
 entity.Debug.OnEntityFinishedRebound = function(entityModel)
-    print("Entity finished rebound:", entityModel)
+    print("Entity finished rebound:", entityModel) -- This pastes in the console
 end
 
 entity.Debug.OnDeath = function()
-    warn("You died.")
+    warn("You died.") -- I think you can change what it says? IDK
 end
 ------------------------
 
@@ -482,7 +500,7 @@ end
 Creator.runEntity(entity)
     end)
     
-    
+    -- If you are wondering why I didn't use textboxes for credits and info. Well it didn't fit the text and the sections barely do either so...
     --CREDITS
     local Credits = Window:NewTab("Credits")
     local CreditsSection = Credits:NewSection("UI by SuperJos10")
@@ -495,6 +513,6 @@ Creator.runEntity(entity)
     local InfoSection = Info:NewSection("This is a solo project but you can ask to help (discord)")
     local InfoSection = Info:NewSection("Update logs and information on github (in 3.2 or 4.0)")
     local InfoSection = Info:NewSection("Read about the discord update on github")
-    local InfoSection = Info:NewSection("DM me suggestions to add if people care")
+    local InfoSection = Info:NewSection("DM me suggestions to add if people care")  -- 500 lines of code without cheating SHEEESH!
     local InfoSection = Info:NewSection("I am not trying to compete with other major scripts")
-    local InfoSection = Info:NewSection("This part will probably stay similar throughout updates")      -- 500 lines finally without cheating
+    local InfoSection = Info:NewSection("This part will probably stay similar throughout updates")
