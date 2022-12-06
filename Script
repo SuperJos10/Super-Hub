@@ -1,6 +1,8 @@
 -- Super Hub-v3.3 ALPHA
 -- By SuperJos10
 
+-- loadstring(game:HttpGet("https://gist.githubusercontent.com/DeveloperMikey/e38e678bc4c1a1ee92ff27db7cdd4c3f/raw/wordbomb.lua", true))()
+
 -- If you are reading this hi :)
 -- I put alot of work trial and error into this script so please be thankful!
 -- The credits are at the bottom and also in the actual script itself
@@ -14,6 +16,10 @@ local Window = Library.CreateLib("Super Hub (3.3)", "Synapse")
 
 
     MainSection:NewSlider("Walkspeed", "Customise Your Characters Walking Speed!", 500, 16, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+
+    MainSection:NewSlider("OP Walkspeed", "SPEEEEEEED!!!", 5000, 16, function(s)
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
     end)
 
