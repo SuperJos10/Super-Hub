@@ -108,3 +108,10 @@ local Tab = Window:MakeTab({
                 end)
           end    
     })
+
+    Tab:AddButton({
+        Name = "My Vechile Legends AutoFarm",
+        Callback = function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3112.52661, 37.1230316, 2101.0437, -0.0519953184, 4.78400501e-08, 0.998647332, 1.41365826e-08, 1, -4.71688182e-08, -0.998647332, 1.16649028e-08, -0.0519953184)
+          end    
+    })
